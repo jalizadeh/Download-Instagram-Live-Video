@@ -32,10 +32,11 @@
 if (!isset($_POST['submit']))
 	die();
 
-$pattern_only_links = '/<MPD.*<\/MPD>/';
+$pattern_only_links = '/<MPD.*?<\/MPD>/';
 $pattern_link = '~[a-z]+://[a-zA-Z0-9\.\/_?=&;-]+~';
 $data = $_POST['data'];
 
+/*
 //get requester ID for further info
 $dj = json_decode($data, true);
 //var_dump($dj);
@@ -43,6 +44,7 @@ $customerID = 0;
 foreach ($dj as $key => $item) {
     $customerID =  $key;
 }
+*/
 
 //$channelUsername = $dj["{$customerID}"][0]["broadcasts"][0]["broadcast_owner"]["username"];
 //$channelFullName = $dj["{$customerID}"][0]["broadcasts"][0]["broadcast_owner"]["full_name"];
