@@ -54,14 +54,15 @@ foreach ($dj["{$customerID}"] as $value) {
 
 	$channelUsername = $value["broadcasts"][0]["broadcast_owner"]["username"];
 	$channelFullName = $value["broadcasts"][0]["broadcast_owner"]["full_name"];
-
+	$channelProfilePicURL = $value["broadcasts"][0]["broadcast_owner"]["profile_pic_url"];
 	echo "<h1>" ;//. $liveCounter;		
+	echo '<a href="https://www.instagram.com/' . $channelUsername . '" target="blank"><img src="' . $channelProfilePicURL . '" width="50" height="50"></a>';
 	echo ' <a href="https://www.instagram.com/' . $channelUsername . '" target="blank">';
 	echo $channelFullName;
 	echo '</a>';
 	echo "</h1>";
 
-	echo "Following links will expire on: " .	date("Y-m-d H:i:s",$value["broadcasts"][0]["expire_at"]);
+	echo "Following links expire on: " .	date("Y-m-d H:i:s",$value["broadcasts"][0]["expire_at"]);
 
 	//counter of number broadcast of each unique channel
 	$liveCounter = 1;

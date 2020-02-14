@@ -8,6 +8,7 @@ You can copy and paste the `sample_data.json` in this [link](http://www.jalizade
 ### WIP
 - [x] Live counter
 - [x] Extract video(s) and audio links
-- [ ] Show page&apos;s name and link to it
-- [ ] Show page&apos;s photo
-- [ ] Show live termination time
+- [x] Show page&apos;s name and link to it
+- [x] Show page&apos;s photo
+- [x] Show live termination time
+- [ ] Better UI
